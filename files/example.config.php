@@ -32,4 +32,7 @@
     $config['socket']['key'] = '';
 
     $config['ssga-ua'] = '';
+    
+    $config['wechallAuthKey'] = '42';
+    $config['wechallOutOfCompetition'] = array('flabbyrabbit');
 ?>
