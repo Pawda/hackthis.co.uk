@@ -22,6 +22,20 @@
         die();
     }
 
+    if (isset($_GET['wechallFeed']) && isset($_GET['key'])) {
+        header("Content-type: text/plain");
+
+        // Make call to api
+        try {
+            $api = new wechallFeed($app, $_GET['key']);
+            $api->process();
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+
+        die();
+    }
+
     if ($app->user->loggedIn) {
         require_once("home.php");
     } else {
