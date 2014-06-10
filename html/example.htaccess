@@ -73,6 +73,8 @@ RewriteRule ^user/(.+)$ /user/index.php?user=$1&%{QUERY_STRING}
 RewriteRule ^inbox/([0-9]+)$ /inbox/?view=$1&%{QUERY_STRING} [L]
 RewriteRule ^inbox/compose$ /inbox/?compose&%{QUERY_STRING} [L]
 
+#APIS
+RewriteRule ^api/(.+)/(.+)/$ /index.php?$1&action=$2&%{QUERY_STRING} [L]
 
 # ------------------------------------------------------------------------------
 # | Proper MIME types for all files |
